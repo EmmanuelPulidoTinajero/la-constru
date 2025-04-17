@@ -1,109 +1,619 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.team-photo {
-    height: 20em;
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+}
+
+.img {
+    height: 35em;
     width: 100%;
-    border: 0.1em, solid, black;
+    border: 0.1em solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-team {
     width: 100%;
-    height: 30em;
-    border: 0.1em, solid, black;
+    height: 40em;
+    border: 0.1em solid black;
     display: flex;
+    position: relative;
+    background-image: url("https://img.freepik.com/foto-gratis/trabajadores-edificacion-construccion-sitio_23-2149124305.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .text-container {
     width: 45%;
-    height: inherit;
-    border: 0.1em, solid, black;
+    height: 85%;
+    margin-top: 2em;
+    margin-left: 3em;
+    padding: 1.5rem;
+    border: 0.1em solid black;
+    border-radius: 8%;
+    background-color: rgba(128, 128, 128, 0.85);
+    position: absolute;
+    z-index: 1;
+    overflow-y: auto;
 }
 
-.img {
-    width: 65%;
-    height: inherit;
-    border: 0.1em, solid, black;
+#text-container-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.2rem;
+    text-align: justify;
+    z-index: 2;
 }
 
-.carrousel-container {
+#about-us-p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.25rem;
+    padding-top: 2em;
+    text-align: justify;
+}
+
+.carousel-container {
+    position: relative;
     width: 100%;
     height: 50em;
-    border: 0.1em, solid, black;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    border: 0.1em solid black;
 }
 
-.carrousel {
+.carousel-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://img.freepik.com/free-vector/memphis-style-pattern-design_1156-891.jpg?semt=ais_hybrid&w=740");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.carousel {
     width: 25%;
-    height: 20em;
-    border: 0.1em, solid, black;
+    height: 25em;
+    border: 0.1em solid black;
+    border-radius: 10%;
+    background-color: white;
+    z-index: 1;
+    position: relative;
 }
 
 .solutions-container {
     width: 100%;
-    height: 60em;
-    border: 0.1em, solid, black;
+    height: auto;
+    border: 0.1em solid black;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .img-1 {
-    height: inherit;
+    height: 60em;
     width: 50%;
-    border: 0.1em, solid, black;
+    border: 0.1em solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("https://media.istockphoto.com/id/876864896/es/foto/construcci%C3%B3n-nuevo-lujoso-en-bellevue-wa.jpg?s=612x612&w=0&k=20&c=EYHCvXQT7NNnJu5wNjuIB57Yhow6PXfZTkO94qWY_64=");
+    background-size: cover;
+    background-position: center;
 }
 
 .text-solutions {
-    width: 60%;
-    height: 35em;
-    border: 0.1em, solid, black;
+    width: 50%;
+    height: auto;
+    min-height: 60em;
+    border: 0.1em solid black;
+    background-color: #1B1B1B;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-solutions-text {
+    color: #E4DDCB;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+#text-solutions-p {
+    font-size: 1rem;
+    padding: 1.5rem;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: justify;
 }
 
 .services-container {
     width: 60%;
-    height: 35em;
-    border: 0.1em, solid, black;
+    height: auto;
+    border: 0.1em solid black;
+    background-color: #E4DDCB;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: 2rem 0;
 }
 
 .text-services, .delivery {
     width: 100%;
-    height: 50%;
-    border: 0.1em, solid, black;
+    height: auto;
+    background-color: #E4DDCB;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.text-services-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+    padding: 1.5rem;
+    text-align: justify;
+    color: #1B1B1B;
 }
 
 footer {
     width: 100%;
-    height: 25em;
-    border: 0.1em, solid, black;
+    height: auto;
+    min-height: 20em;
+    border: 0.1em solid black;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
+    background-color: white;
+    padding: 2rem 0;
 }
 
 .logo {
     width: 10em;
     height: 10em;
-    border: 0.1em, solid, black;
+    border: 0.1em solid black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    margin: 1rem;
 }
 
-.socials, .contact-info {
+.socials {
     width: 15em;
-    height: 18em;
-    border: 0.1em, solid, black;
+    height: auto;
+    border: 0.1em solid black;
+    background-color: white;
+    margin: 1rem;
+}
+
+.socials ul li{
+    font-size: 1rem;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.75rem;
+}
+
+.contact-info {
+    width: 15em;
+    height: auto;
+    border: 0.1em solid black;
+    background-color: white;
+    margin: 1rem;
+}
+
+.contact-info ul li {
+    font-size: 0.85rem;
+    list-style: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 0.5rem;
 }
 
 .maps {
     width: 25em;
     height: 18em;
-    border: 0.1em, solid, black;
+    border: 0.1em solid black;
+    background-image: url("https://developers.google.com/static/maps/images/landing/react-codelab-thumbnail.png?hl=es-419");
+    background-size: cover;
+    background-position: center;
+    margin: 1rem;
+}
+
+@media (max-width: 360px) {
+    .img {
+        height: 15em;
+    }
+    
+    .about-team {
+        height: auto;
+        padding-bottom: 2rem;
+    }
+    
+    .text-container {
+        width: 85%;
+        height: auto;
+        margin: 1rem auto;
+        position: relative;
+        left: -1rem;
+        border-radius: 5px;
+    }
+    
+    #text-container-text {
+        font-size: 1.5rem;
+    }
+    
+    #about-us-p {
+        font-size: 1rem;
+        padding-top: 1rem;
+    }
+    
+    .carousel-container {
+        height: 25em;
+    }
+    
+    .carousel {
+        width: 80%;
+        height: 15em;
+    }
+    
+    .text-solutions-text {
+        font-size: 1.5rem;
+    }
+    
+    #text-solutions-p {
+        font-size: 0.9rem;
+        padding: 1rem;
+        max-width: 90%;
+    }
+    
+    .logo {
+        width: 8em;
+        height: 8em;
+    }
+    
+    .maps {
+        width: 90%;
+        height: 12em;
+    }
+}
+
+@media (max-width: 480px) {
+    .img {
+        height: 18em;
+    }
+    
+    .about-team {
+        height: auto;
+        min-height: 25em;
+    }
+    
+    .text-container {
+        width: 85%;
+        height: auto;
+        min-height: 20em;
+        margin: 1.5rem auto;
+        position: relative;
+        left: -1.2rem;
+    }
+    
+    #text-container-text {
+        font-size: 1.6rem;
+    }
+    
+    .carousel {
+        width: 85%;
+        height: 18em;
+    }
+    
+    .solutions-container {
+        flex-direction: column;
+    }
+    
+    .text-solutions, .img-1 {
+        width: 100%;
+        height: auto;
+        min-height: 30em;
+    }
+    
+    .services-container {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+    
+    .logo, .socials, .contact-info {
+        margin: 1rem auto;
+        text-align: center;
+    }
+    
+    .maps {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .img {
+        height: 20em;
+    }
+    
+    .about-team {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .text-container {
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+        padding: 1rem;
+        border-radius: 5%;
+        position: relative;
+        left: 0;
+    }
+    
+    #text-container-text {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    
+    #about-us-p {
+        font-size: 0.9rem;
+        padding-top: 1.5rem;
+    }
+    
+    .carousel {
+        width: 80%;
+        height: 20em;
+    }
+    
+    .solutions-container {
+        flex-direction: column;
+    }
+    
+    .text-solutions, .img-1 {
+        width: 100%;
+        height: auto;
+        min-height: 40em;
+    }
+    
+    .text-solutions-text {
+        font-size: 1.75rem;
+    }
+    
+    #text-solutions-p {
+        padding: 1rem;
+        max-width: 90%;
+        font-size: 1rem;
+    }
+    
+    .services-container {
+        width: 90%;
+        margin: 1.5rem auto;
+    }
+    
+    footer {
+        flex-direction: column;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .logo, .socials, .contact-info, .maps {
+        width: 90%;
+        height: auto;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-team {
+        height: auto;
+        min-height: 35em;
+    }
+    
+    .text-container {
+        width: 75%;
+        height: auto;
+        min-height: 25em;
+        margin-left: 2rem;
+    }
+
+    #text-container-text {
+        font-size: 1.8rem;
+        padding-bottom: 1.5rem;
+    }
+
+    #about-us-p {
+        font-size: 1.1rem;
+        padding: 0.7rem 0;
+    }
+
+    .carousel {
+        width: 55%;
+        height: 22em;
+    }
+
+    .text-solutions-text {
+        font-size: 2rem;
+    }
+
+    #text-solutions-p {
+        padding: 1.5rem;
+        max-width: 90%;
+        font-size: 1rem;
+        margin: 0 auto;
+    }
+
+    .services-container {
+        width: 90%;
+    }
+
+    .text-services-text {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+    }
+
+    .logo, .socials, .contact-info {
+        margin: 1rem;
+    }
+
+    .maps {
+        width: 80%;
+        height: 15rem;
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .img {
+        height: 30em;
+    }
+    
+    .text-container {
+        width: 60%;
+        margin-left: 2.5rem;
+    }
+    
+    #text-container-text {
+        font-size: 2rem;
+    }
+    
+    #about-us-p {
+        font-size: 1.15rem;
+    }
+    
+    .carousel {
+        width: 40%;
+    }
+    
+    .text-solutions-text {
+        font-size: 2.2rem;
+    }
+    
+    #text-solutions-p {
+        padding: 2rem;
+        max-width: 85%;
+        font-size: 1.1rem;
+    }
+    
+    .services-container {
+        width: 80%;
+    }
+    
+    .text-services-text {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 1280px) {
+    .img {
+        height: 32em;
+    }
+    
+    .text-container {
+        width: 50%;
+    }
+    
+    #text-container-text {
+        font-size: 2.1rem;
+    }
+    
+    .text-solutions-text {
+        font-size: 2.3rem;
+    }
+    
+    #text-solutions-p {
+        padding: 2rem 3rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 1440px) {
+    .text-container {
+        width: 45%;
+    }
+    
+    #text-solutions-p {
+        max-width: 80%;
+        padding: 2rem 4rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 18px;
+    }
+    
+    .img {
+        height: 40em;
+    }
+    
+    .about-team {
+        height: 45em;
+    }
+    
+    .text-container {
+        width: 40%;
+        max-width: 800px;
+        margin-left: 5em;
+    }
+    
+    .carousel-container {
+        height: 55em;
+    }
+    
+    .carousel {
+        width: 22%;
+        height: 28em;
+    }
+    
+    .solutions-container {
+        height: 65em;
+    }
+    
+    .img-1, .text-solutions {
+        height: 65em;
+    }
+    
+    .services-container {
+        width: 55%;
+        height: 38em;
+    }
+    
+    .text-solutions-text {
+        font-size: 2.8rem;
+    }
+    
+    #text-solutions-p {
+        font-size: 1.2rem;
+        max-width: 70%;
+        padding: 2rem 5rem;
+    }
+    
+    footer {
+        min-height: 25em;
+        padding: 3rem 0;
+    }
+    
+    .logo {
+        width: 12em;
+        height: 12em;
+    }
+    
+    .maps {
+        width: 30em;
+        height: 22em;
+    }
 }
