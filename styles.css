@@ -1,90 +1,96 @@
-/* Reset and Base Styles (Keep these) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
 }
 
 html {
-    /* Set a base font size for rem units */
-    font-size: 16px; /* You can adjust this */
+    font-size: 16px;
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.6;
-    /* Consider a slightly larger base font size for better readability on larger screens */
-    font-size: 1rem; /* This will be the base for rem units */
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    margin-left: 0.5rem;
+}
+
+#title {
+    font-weight: bolder;
 }
 
 .img {
-    height: auto; /* Adjust height based on content and aspect ratio */
+    height: auto;
     width: 100%;
-    border: 0.1em solid black;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 15em; /* Ensure a minimum height */
+    min-height: 15em;
+    background-image: url(./images/Materiales\ Ligeros\ Logo.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .about-team {
     width: 100%;
-    min-height: 40em; /* Use min-height for flexibility */
-    border: 0.1em solid black;
+    min-height: 40em;
     display: flex;
     position: relative;
-    background-image: url("https://img.freepik.com/foto-gratis/trabajadores-edificacion-construccion-sitio_23-2149124305.jpg");
-    background-size: cover;
+    background-image: url(./images/Casa\ Remodelación.svg);
+    background-size: auto;
+    background-repeat: no-repeat;
     background-position: center;
-    padding-bottom: 2rem; /* Add some padding at the bottom for smaller screens */
+    padding-bottom: 2rem;
 }
 
 .text-container {
-    /* Use percentages for width and height to scale with the parent */
     width: 85%;
-    max-width: 60em; /* Add a maximum width for larger screens */
+    max-width: 60em;
     height: auto;
     min-height: 20em;
-    margin: 2em auto; /* Center the container */
+    margin: 2em auto;
     padding: 1.5rem;
-    border: 0.1em solid black;
     border-radius: 8%;
     background-color: rgba(128, 128, 128, 0.85);
-    position: relative; /* No longer absolute to flow better */
+    position: relative;
     z-index: 1;
     overflow-y: auto;
 }
 
 #text-container-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.5rem; /* Use rem for scalability */
-    text-align: justify;
+    font-size: 1.5rem;
+    text-align: center;
     z-index: 2;
 }
 
 #about-us-p {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1rem; /* Use rem for scalability */
-    padding-top: 1em; /* Use em for relative spacing */
+    font-size: 1rem;
+    padding-top: 1em;
     text-align: justify;
 }
 
 .carousel-container {
+    padding: 0 3rem;
     position: relative;
     width: 100%;
-    min-height: 50em; /* Use min-height */
+    min-height: 50em;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    border: 0.1em solid black;
 }
 
 .carousel-container::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("https://img.freepik.com/free-vector/memphis-style-pattern-design_1156-891.jpg?semt=ais_hybrid&w=740");
+    background-image: url(./images/Patron\ \(1\).svg);
     background-size: cover;
     background-position: center;
     opacity: 0.5;
@@ -92,11 +98,10 @@ body {
 }
 
 .carousel {
-    width: 80%; /* Adjust width as needed */
-    max-width: 35em; /* Add a maximum width */
+    width: 80%;
+    max-width: 35em;
     height: auto;
-    min-height: 25em; /* Use min-height */
-    border: 0.1em solid black;
+    min-height: 25em;
     border-radius: 10%;
     background-color: white;
     z-index: 1;
@@ -110,21 +115,19 @@ body {
 }
 
 .img-1 {
-    width: 100%; /* Default to full width on smaller screens */
-    min-height: 40em; /* Use min-height */
-    border: 0.1em solid black;
+    width: 100%; 
+    min-height: 40em; 
     display: block;
     justify-content: center;
     align-items: center;
-    background-image: url("https://media.istockphoto.com/id/876864896/es/foto/construcci%C3%B3n-nuevo-lujoso-en-bellevue-wa.jpg?s=612x612&w=0&k=20&c=EYHCvXQT7NNnJu5wNjuIB57Yhow6PXfZTkO94qWY_64=");
+    background-image: url(./images/Man\ in\ Materials\ Warehouse.jpg);
     background-size: cover;
     background-position: center;
 }
 
 .text-solutions {
-    width: 100%; /* Default to full width */
-    min-height: 40em; /* Use min-height */
-    border: 0.1em solid black;
+    width: 100%;
+    min-height: 40em; 
     background-color: #1B1B1B;
     display: flex;
     flex-direction: column;
@@ -133,64 +136,73 @@ body {
 
 .text-solutions-text {
     color: #E4DDCB;
-    font-size: 1.75rem; /* Use rem */
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.75rem;
     text-align: center;
     padding: 1.5rem;
 }
 
 #text-solutions-p {
-    font-size: 1rem; /* Use rem */
+    font-size: 1rem;
     padding: 1.5rem;
-    max-width: 90%; /* Adjust max-width */
+    max-width: 90%;
     margin: 0 auto;
     text-align: justify;
 }
 
 .services-container {
-    width: 90%; /* Adjust width */
-    max-width: 80em; /* Add a maximum width */
-    margin: 2rem auto; /* Center the container */
-    border: 0.1em solid black;
+    width: 90%;
+    max-width: 80em; 
+    margin: 2rem auto;
     background-color: #E4DDCB;
     border-radius: 1.5rem;
     overflow: hidden;
-    display: block; /* Use flex to arrange items horizontally on larger screens */
-    justify-content: center; /* Center items */
+    display: block; 
+    justify-content: center; 
 }
 
 .text-services, .delivery {
-    width: 100%; /* Full width by default */
-    min-height: 10em; /* Use min-height */
+    width: 100%; 
+    min-height: 10em; 
     background-color: #E4DDCB;
     text-align: center;
     padding: 2rem 1rem;
 }
 
 .text-services-text {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 0.9rem; /* Use rem */
+    font-size: 0.9rem; 
     padding: 1.5rem;
     text-align: justify;
     color: #1B1B1B;
 }
 
+.title-services {
+    display: flex;
+    align-items: center;
+}
+
+.text-icon {
+    width: 1.6em;
+    height: 1.6em;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    display: inline-block;
+    object-fit: contain;
+}
+
 footer {
     width: 100%;
-    min-height: 15em; /* Use min-height */
-    border: 0.1em solid black;
+    min-height: 15em;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
     background-color: white;
-    padding: 2rem; /* Adjust padding */
+    padding: 2rem; 
 }
 
 .logo {
     width: 8em;
     height: 8em;
-    border: 0.1em solid black;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -201,11 +213,10 @@ footer {
 
 .socials, .contact-info, .maps {
     width: 15em;
-    min-height: 8em; /* Use min-height */
-    border: 0.1em solid black;
+    min-height: 8em; 
     background-color: white;
     margin: 1rem;
-    padding: 1rem; /* Add some padding */
+    padding: 1rem; 
 }
 
 .socials ul, .contact-info ul {
@@ -215,27 +226,162 @@ footer {
 }
 
 .socials ul li{
-    font-size: 1rem; /* Use rem */
+    font-size: 1rem; 
     padding: 0.5rem 0;
+    text-decoration: none;
+    color: black;
 }
 
 .contact-info ul li {
-    font-size: 0.9rem; /* Use rem */
+    font-size: 0.9rem;
     padding: 0.3rem 0;
+    text-decoration: none;
+    color: black;
 }
 
-.maps {
-    background-image: url("https://developers.google.com/static/maps/images/landing/react-codelab-thumbnail.png?hl=es-419");
-    background-size: cover;
-    background-position: center;
-}
+#floating-button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    transition: opacity 0.4s ease;
+  }
+  
+  .button-image {
+    width: 20rem;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+  
+  .hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+
+
+/* SPLIDE CSS */
+.splide {
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  .card {
+    background-color: white;
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: auto;
+    max-width: 90%;
+  }
+  
+  
+  .img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+  }
+  
+  .card h3, .card .desc, .card {
+    position: relative;
+    z-index: 1;
+    color: #1B1B1B; 
+    text-align: center;
+  }
+  
+  .card h3 {
+    font-size: 1.3rem;
+    margin: 0.25rem 0;
+    font-weight: bold;
+  }
+  
+  .card .desc {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .splide__slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .splide__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .splide__arrow--prev {
+    left: -3rem;
+  }
+  
+  .splide__arrow--next {
+    right: -3rem; 
+  }
+
+  
+  .splide__pagination__page {
+    background-color: #888888 !important;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    border: none;
+  }
+  
+  .splide__pagination__page.is-active {
+    background-color: #E63946 !important;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
 
 /* --- Media Queries --- */
 
 /* Small screens (up to 600px) */
 @media (max-width: 600px) {
     body {
-        font-size: 0.9rem; /* Slightly smaller base font */
+        font-size: 0.9rem;
     }
 
     .text-container {
@@ -260,7 +406,7 @@ footer {
     }
 
     .solutions-container {
-        flex-direction: column; /* Stack items on small screens */
+        flex-direction: column;
     }
 
     .img-1, .text-solutions {
@@ -278,14 +424,24 @@ footer {
     }
 
     .services-container {
-        flex-direction: column; /* Stack services on small screens */
-        align-items: center; /* Center them */
+        flex-direction: column;
+        align-items: center;
     }
 
-    .logo, .socials, .contact-info, .maps {
+    .logo, .socials, .contact-info, .maps{
         width: 90%;
         margin: 1rem auto;
         text-align: center;
+    }
+
+    .logo img {
+        width: 15rem;
+        height: auto;
+    }
+
+    .maps iframe {
+        width: 90%;
+        height: 90%;
     }
 
     footer {
@@ -293,12 +449,22 @@ footer {
         padding: 2rem 1rem;
         text-align: center;
     }
+
+    .splide {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .button-image {
+        width: 15rem;
+        height: auto;
+    }
 }
 
 /* Medium screens (601px to 1024px) */
 @media (min-width: 601px) and (max-width: 1024px) {
     body {
-        font-size: 1rem; /* Slightly larger base font */
+        font-size: 1rem;
     }
 
     .text-container {
@@ -320,7 +486,7 @@ footer {
     }
 
     .solutions-container {
-        flex-direction: row; /* Keep side-by-side */
+        flex-direction: row;
     }
 
     .img-1, .text-solutions {
@@ -338,12 +504,12 @@ footer {
     }
 
     .services-container {
-        flex-direction: block; /* Arrange services horizontally */
-        justify-content: space-around; /* Distribute space */
+        flex-direction: block;
+        justify-content: space-around;
     }
 
     .text-services, .delivery {
-        width: 100%; /* Adjust width for horizontal layout */
+        width: 100%;
     }
 
     .text-services h1, .delivery h1 {
@@ -352,31 +518,41 @@ footer {
     }
 
     footer {
-        flex-direction: row; /* Keep items in a row */
+        flex-direction: row;
         justify-content: space-around;
-        text-align: left; /* Adjust text alignment */
+        text-align: left;
     }
 
     .logo, .socials, .contact-info, .maps {
-        width: auto; /* Allow automatic width */
+        width: auto;
         margin: 1rem;
     }
 
+    .logo img {
+        width: 15rem;
+        height: auto;
+    }
+
     .maps {
-        width: 30%; /* Adjust map width */
+        width: 50%;
+        display: flex;
+        justify-items: center;
+        align-items: center;
     }
 }
 
 /* Large screens (1025px and up) */
 @media (min-width: 1025px) {
     body {
-        font-size: 1.1rem; /* Slightly larger base font */
+        font-size: 1.1rem;
     }
 
     .text-container {
         width: 40%;
         max-width: 40em;
         margin-left: 5em;
+        padding-top: 3rem;
+        height: auto;
     }
 
     #text-container-text {
@@ -394,7 +570,7 @@ footer {
     }
 
     .solutions-container {
-        flex-direction: row; /* Keep side-by-side */
+        flex-direction: row;
     }
 
     .img-1, .text-solutions {
@@ -418,11 +594,18 @@ footer {
     }
 
     .services-container {
-        justify-content: space-around; /* Distribute space */
+        justify-content: space-around;
+        width: 70%;
+        height: auto;
     }
 
     .text-services, .delivery {
-        width: 100%; /* Adjust width for larger screens */
+        width: 100%;/
+    }
+
+    .text-services-text {
+        padding-bottom: 0;
+        font-size: 1.1rem;
     }
 
     .text-services h1 {
@@ -430,11 +613,11 @@ footer {
     }
 
     .delivery h1 {
-        font-size: 1.2rem;
+        font-size: 1.2rem;;
     }
 
     footer {
-        flex-direction: row; /* Keep items in a row */
+        flex-direction: row;
         justify-content: space-around;
         padding: 3rem;
         text-align: left;
@@ -450,10 +633,10 @@ footer {
     }
 }
 
-/* Very large screens (1921px and up) - Adjust as needed */
+/* Very large screens (1921px and up)*/
 @media (min-width: 1921px) {
     body {
-        font-size: 1.2rem; /* Further increase base font */
+        font-size: 1.2rem;
     }
 
     .text-container {
@@ -471,7 +654,8 @@ footer {
     }
 
     .services-container {
-        height: 30rem;
+        height: 40rem;
+        width: 60%;
         border-radius: 4%;
     }
 
@@ -489,5 +673,11 @@ footer {
 
     #text-solutions-p {
         font-size: 1.2rem;
+        color: blue;
+    }
+
+    .logo img {
+        width: 50rem;
+        height: auto;
     }
 }
